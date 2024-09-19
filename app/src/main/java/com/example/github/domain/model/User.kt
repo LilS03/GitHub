@@ -1,4 +1,4 @@
-package com.example.github.domain
+package com.example.github.domain.model
 
 data class User(
     val userName: String,

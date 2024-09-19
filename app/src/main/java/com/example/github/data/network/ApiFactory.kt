@@ -7,9 +7,12 @@ object ApiFactory {
     private const val BASE_URL = "https://api.github.com/"
 
     private val retrofit = Retrofit.Builder()
+        //.client(OkHttpClient.Builder().addInterceptor().build())
         .addConverterFactory(GsonConverterFactory.create())
         .baseUrl(BASE_URL)
         .build()
 
     val apiService: ApiService = retrofit.create(ApiService::class.java)
+
+
 }

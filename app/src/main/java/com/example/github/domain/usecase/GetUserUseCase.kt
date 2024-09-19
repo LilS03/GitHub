@@ -1,6 +1,6 @@
 package com.example.github.domain.usecase
 
-import com.example.github.domain.UserRepository
+import com.example.github.domain.repository.UserRepository
 
 class GetUserUseCase(
     private val repository: UserRepository

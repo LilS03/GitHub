@@ -1,24 +1,13 @@
 package com.example.github.data.network
 
-import com.example.github.data.network.model.UserJsonContainerDto
-import com.example.github.data.network.model.UserNamesListDto
+import com.example.github.data.model.UserDto
 import retrofit2.http.GET
-import retrofit2.http.Query
+import retrofit2.http.Path
 
 interface ApiService {
     @GET("users")
-    suspend fun getUsers(
-        @Query("avatar_url") avatarUrl: String = "",
-        @Query("login") username: String = "",
-        @Query("id") id: Int = 0,
-    ): UserNamesListDto
+    suspend fun getUsers(): List<UserDto>
 
     @GET("users/{username}")
-    suspend fun getUserInfo(
-        @Query("name") fullName: String = "",
-        @Query("location") location: String = "",
-        @Query("followers") followers: String = "",
-        @Query("following") following: String = "",
-        @Query("bio") bio: String = "",
-    ): UserJsonContainerDto
+    suspend fun getUser(@Path("username") username: String): UserDto
 }

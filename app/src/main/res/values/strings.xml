@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">GitHub</string>
+    <string name="toDetailPage">ToDetailPage</string>
+    <string name="userAvatar">UserAvatar</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="locationIcon">Location</string>
 </resources>
